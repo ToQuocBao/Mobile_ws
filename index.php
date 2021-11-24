@@ -1,3 +1,7 @@
+<?php
+    header('./Home');
+?>
+
 <!DOCTYPE html>
 <html>
 
