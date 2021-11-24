@@ -11,7 +11,7 @@ session_start();
   <link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">  
   <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">  
-  <link rel="stylesheet" type="text/css" href="../Css/Home.css">
+  <link rel="stylesheet" href="../Css/Home.css">
 </head>
 <body>
 
@@ -69,15 +69,11 @@ session_start();
   <!-- Video -->
   <div class="video-container">
     <div class="video-text"> 
-      <h2>MERCEDES-BENZ</h2>
-      <p>Mercedes-Benz là một trong những hãng sản xuất xe ô tô, xe buýt, xe tải danh tiếng trên thế giới. Hãng được xem là hãng sản xuất xe hơi lâu đời nhất còn tồn tại đến ngày nay. Khởi đầu, hãng thuộc sở hữu bởi Daimler-Benz.</p> 
-      <p>Hiện tại, hãng là một thành viên của công ty mẹ, Daimler AG (tên trước đây là DaimlerChrysler AG). Mercedes-Benz còn là một trong những hãng đi tiên phong trong việc giới thiệu nhiều công nghệ và những sáng kiến về độ an toàn mà sau đó đã trở nên phổ biến trên toàn thế giới. </p>
-      <p>Các dòng xe Mercedes-Benz phổ biển:</p>
+      <h2>Chấm công bằng cách quét mã QR</h2>
+      <p>Ứng dụng hổ trợ cho việc chấm công qua mã QR</p> 
+      <p>Dễ dàng sử dụng, giúp tiết kiệm thời gian so với phương thức chấm công truyền thống. Đồng thời giúp hạn chế việc tiếp xúc trực tiếp.</p>
+      <p></p>
     <ul>
-      <li>Dòng xe Mercedes-Benz A Class</li>
-      <li>Dòng xe Mercedes-Benz B Class</li>
-      <li>Dòng xe Mercedes-Benz C Class</li>
-      <li>Dòng xe Mercedes-Benz E Class</li>
     </ul>
     </div>
       <video autoplay muted loop class="myVideo">
@@ -88,67 +84,7 @@ session_start();
 
 
 <div class="page-wrapper">
-  <div id="waterdrop"></div>
-  <footer>
-    <div class="footer-top">
-      <div class="container">
-          <div class="customer-column">
-            <div class="widget footer_widget">
-              <h5 class="footer-title">Khách hàng</h5>
-              <p>Câu hỏi thường gặp</p>
-              <p>Hỗ trợ khách hàng</p>
-              <p>Hỗ trợ bảo trì</p>
-              <p>Hướng dẫn sử dụng</p>
-              <p>Lịch dịch vụ</p>
-              <p>Hướng dẫn thanh toán</p>
-            </div>
-          </div>
-              <div class="service-column">
-                <div class="widget footer_widget">
-                  <h5 class="footer-title">Dịch vụ</h5>
-                  <p>Bảo hành</p>
-                  <p>Thay thế thiết bị</p>
-                  <p>Sửa chữa</p>
-                  <p>Mua linh kiện phụ tùng</p>
-                  <p>Báo giá sản phẩm</p>
-                  <p>Mua xe mới</p>
-                </div>
-              </div>
-              <div class="about-us-column">
-                 <div class="widget widget_gallery gallery-grid-4">
-              <h5 class="footer-title">Về chúng tôi</h5>
-              <p>Giới thiệu</p>
-              <p>Chính sách đại lý</p>
-              <p>Thông báo</p>
-              <p>Khuyến mãi</p>
-              <p>Tài liệu</p>
-              <p>Blog</p>
-            </div>
-              </div>
-          <div class="contact-column">
-            <!-- <div class="widget widget_gallery gallery-grid-4">
-              <h5 class="footer-title">Dunno</h5>
-            </div> -->
-            <div class="widget">
-              <h5 class="footer-title">Phản hồi</h5>
-              <div class="textwidget">
-                <div role="form" class="wpcf7" id="wpcf7-f4-o1" lang="en-US" dir="ltr">
 
-                  <form method="post" class="wpcf7-form" novalidate="novalidate">
-
-                    <div class="contact-form-footer">
-                      <p><span class="wpcf7-form-control-wrap your-first-name"><input type="text" name="your-first-name" value="" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false" placeholder="Your name"></span></p>
-                      <p><span class="wpcf7-form-control-wrap your-email_1"><input type="email" name="your-email_1" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-email" aria-invalid="false" placeholder="Your email"></span></p>
-                      <p><span class="wpcf7-form-control-wrap your-message"><textarea name="your-message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" placeholder="Your message"></textarea></span></p>
-                      <div><input type="submit" value="Send" class="wpcf7-form-control wpcf7-submit"><span class="ajax-loader"></span></div>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-      </div>
-    </div>
     <div class="footer-bottom">
       <div class="container-last">
             <nav id="footer-navigation" class="site-navigation footer-navigation centered-box">

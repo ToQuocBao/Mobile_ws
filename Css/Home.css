@@ -26,7 +26,7 @@ body {
   font-family: "Poppins";
   line-height: 20px;
   color: #b1b4bd;
-  background-color: white;
+  background-color: black;
 }
 
 a {
@@ -100,7 +100,7 @@ a:hover {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
-  background-color: green;
+  background-color: rgba(12, 32, 59, 0.5);
 }
 
 .navbar .navbar-brand a {
