@@ -18,7 +18,7 @@ elseif ($_SESSION["is_login"] == false)
   <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
   <!-- Reponsive -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-  <link rel="stylesheet" type="text/css" href="./Home.css">
+  <link rel="stylesheet" type="text/css" href="../Css/Home.css">
 </head>
 <body>
     <img id="fixed-background" src="../image/fixed-background.jpg" alt="fixed-image">

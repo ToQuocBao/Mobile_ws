@@ -11,7 +11,7 @@ session_start();
   <link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">  
   <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">  
-  <link rel="stylesheet" type="text/css" href="./Home.css">
+  <link rel="stylesheet" type="text/css" href="../Css/Home.css">
 </head>
 <body>
 
