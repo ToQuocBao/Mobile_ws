@@ -55,7 +55,7 @@ a:hover {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
-  background-color: rgba(12, 32, 59, 0.5);
+  background-color: green;
 }
 
 .navbar .navbar-brand a {

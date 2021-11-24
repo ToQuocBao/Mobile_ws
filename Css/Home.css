@@ -25,12 +25,12 @@ body {
   font-size: 18px;
   font-family: "Poppins";
   line-height: 20px;
-  color: #b1b4bd;
-  background-color: black;
+  color: black;
+  background-color: white;
 }
 
 a {
-  color: #b1b4bd;
+  color: white;
   font-weight: 500;
 }
 
@@ -43,7 +43,7 @@ a:hover {
   display: block;
   overflow: visible;
   top: 0;
-  margin-bottom: 32px;
+  margin-bottom: 20px;
   margin-left: 1px;
   margin-right: 1px;
   padding-bottom: 70px;
@@ -53,12 +53,12 @@ a:hover {
     linear,
     left top,
     left bottom,
-    from(rgba(50, 58, 69, 0.9))
+    from(#00A344)
   );
   background-image: linear-gradient(
       180deg,
-      rgba(50, 58, 69, 0.55),
-      rgba(50, 58, 69, 0.74)
+      #00A344,
+      white
     ),
     url(../image/background.jpg);
   flex-direction: column;
@@ -100,7 +100,7 @@ a:hover {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
-  background-color: rgba(12, 32, 59, 0.5);
+  background-color: #00A344;
 }
 
 .navbar .navbar-brand a {
@@ -178,7 +178,7 @@ a:hover {
   display: block;
   width: 49%;
   font-family: "Unisect Vnu";
-  color: #b1b4bd;
+  color: black;
   justify-content: center;
   margin-bottom: auto;
   margin-top: auto;
