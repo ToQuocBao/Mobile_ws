@@ -15,7 +15,6 @@ session_start();
 </head>
 <body>
 
-  <img id="fixed-background" src="../image/fixed-background.jpg" alt="fixed-image">
   <div class=header-background>
     <div id="nav" class="sticky-nav">
       <nav class="navbar navbar-expand-lg ">
@@ -65,14 +64,6 @@ session_start();
         </div>
       </nav>
     </div>
-    <section class="showcase">
-      <div class="showcase-container w3-container w3-center">
-        <h1 class="w3-text-shadow w3-animate-opacity">Thế giới Mercedes</h1>
-        <hr>
-        <p class="w3-animate-opacity">Mercedes có thể tự hào về sản phẩm của mình không chỉ có thiết kế tốt nhất và sang trọng mà còn là công nghệ tốt nhất. Mercedes-benz đặt chân lần đầu vào Việt Nam vào năm 1995 và là thành viên của tập đoàn DaimlerChrysler, hãng là một trong những đơn vị phân phối ô tô hàng đầu tại Việt Nam. Những sản phẩm của hãng thiên về chất lượng và kiểu dáng được đánh giá hiện đại luôn luôn bắt kịp những xu hướng của thị trường. Với một thương hiệu xuất thân từ đất nước có nền công nghiệp sản xuất ô tô phát triển cực thịnh như Đức, ngay lập tức hãng chiếm được lòng tin của khách hàng.</p>
-        <button onclick="document.getElementById('start-modal').style.display='block'" class="w3-button w3-red w3-large w3-opacity">Khám phá</button>
-      </div>
-    </section>
   </div>
   
   <!-- Video -->
@@ -93,52 +84,6 @@ session_start();
       <source src="../video1.mp4" type="video/mp4">
        </video>
   </div>
-
-  <div class="container-2">
-    <h2>TẠI SAO BẠN NÊN CHỌN MERCEDES</h2>
-  <div class="column-layout">
-    <div class="column--1">
-      <h4>TIÊN PHONG VỀ CÔNG NGHỆ AN TOÀN</h4>
-      <p>Trong hơn nửa thập kỷ, các kỹ sư của Mercedes đã tận tụy chuẩn bị cho một khoảnh khắc mà họ hy vọng không bao giờ xảy ra.
-        Đó là các kỹ sư của hãng đã nghiên cứu trang bị cho những mẫu xe của họ các trang bị an toàn tiên tiến nhất.</p>
-        <p> Để giảm tới mức tối đa tỉ lệ tai nạn xảy ra, cùng với các hệ thống bảo vệ người lái và hành khách trong xe. Khi chẳng may có sự cố phát sinh, giảm tỉ lệ nghiêm trọng của sự cố xuống mức thấp nhất có thể. Các kỹ sư của Mercedes luôn làm việc hết mình để chuẩn bị cho mẫu xe mình các công nghệ bảo vệ và giảm thiểu tính nghiệm trong của các sự cố.
-      </p>
-    </div>
-    <div class="column--1">
-      <h4>TIÊU CHUẨN KHẮT KHE NHẤT THẾ GIỚI</h4>
-      <P>Mỗi chiếc Mercedes được giao tới tay khách hàng phải đạt tất cả các tiêu chuẩn cao nhất của hãng đã đặt ra. Không chỉ là thiết kế bề ngoài, mà cảm giác tới từng chi tiết nhỏ trong nội thất, cảm giác lái và cả âm thanh chiếc xe phát ra.</P> 
-      <p>Đối với Mercedes họ không quan đến việc chế tạo ra những chiếc xe chỉ đơn thuần là mạnh mẽ hay tốc độ cao. Thay vào đó, họ chế tạo những chiếc ô tô kết hợp nhiều khía cạnh của hiệu suất, thiết kế nội ngoại thất, để tạo ra thứ gì đó phi thường.</p> 
-      <p>Slogan Mercedes nói lên tất cả: "The best or nothing – Tốt nhất hoặc không là gì cả".</P>
-    </div>
-  </div>
-  <div class="column-layout">
-    <div class="column--1">
-      <h4> MERCEDES LÀ HÃNG XE HƠI CÓ LỊCH SỬ LÂU ĐỜI NHẤT THẾ GIỚI</h4>
-      <p>Kể từ khi phát minh ra chiếc xe hơi đầu tiên, Mercedes đã định hình tiêu chuẩn cho ngành sản xuất ô tô. Với các mẫu xe đặc trưng cho sự an toàn, hiệu suất và cảm giác lái xe tuyệt vời. Chỉ có một lý do khiến nhà sản xuất ô tô đầu tiên trên thế giới vấn đứng đầu ngành đến nay, đó là sự đổi mới liên tục.</p>
-    </div>
-    <div class="column--1">
-      <h4>THƯƠNG HIỆU ĐẲNG CẤP NHẤT THẾ GIỚI</h4>
-      <P> Mercedes là thương hiệu ô tô có giá trị lớn nhất thế giới, khi nhắc đến Mercedes người ta sẽ nghĩ ngay đến tầng lớp tinh hoa thành đạt, những người không chỉ tạo ra nhiều của cải cho chính mình mà họ còn đóng góp rất nhiều cho xã hội. </P>
-    </div>
-  </div>
-</div>
-
-  <div class="video-container">
-      <video autoplay muted loop class="myVideo">
-      <source src="../video2.mp4" type="video/mp4">
-       </video>
-    <div class="video-text"> 
-      <h2>First Move The World
-      </h2>
-<p>Mục tiêu của Mercedes-Benz được đúc kết trong câu 'First Move The World', có thể hiểu là động lực, là ý nghĩa của mọi việc chúng tôi thực hiện. 'First Move the World' là lời thúc đẩy phải đạt được nhiều hơn, tiến xa hơn những mục tiêu ngay trước mắt. Tinh thần quả cảm đó là sức sống của thương hiệu, hoặc theo cách gọi của chúng tôi - ADN của thương hiệu.</p>    
-<p>Giữa những biến đổi, tinh thần ấy giúp định hướng cho chiến lược kinh doanh hòa hợp và bền vững, và cho mọi quyết định. Tinh thần đó được thể hiện qua Tầm nhìn 2039 – con đường đến với di chuyển bền vững, tìm các nguồn năng lượng xanh, and duy trì quan hệ đối tác chiến lược cho các dự án xe không người lái với Tập đoàn mẹ Daimler và Tập đoàn BMW.</p>
-    </div>
-  </div>
-  
-
-
-  
-
 
 
 
