@@ -5,7 +5,7 @@ document.getElementsByTagName('head')[0].appendChild(script);
 
 function getEmployee(){
     var tble =  $("<table></table>");
-    for (let i = 0; i < 3; i++){
+    for (let i = 0; i < 5; i++){
         var tr = $("<tr></tr>");
         var tc1 = $("<td></td>").text(i);
         var tc2 = $("<td></td>").text(i*10);

@@ -64,7 +64,8 @@ session_start();
   </div>
   
   <!-- Video -->
-  <div class ="my-display"></div>
+  <div class ="my-display">
+  </div>
 
 
 <div class="page-wrapper">
