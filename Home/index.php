@@ -131,5 +131,5 @@ session_start();
 </body>
 </html>
 <?php 
-  //if (!isset($_SESSION["isAdmin"]) || !($_SESSION["isAdmin"])) echo '<script>$(".dropdown").hide(); $(".navbar-nav").hide()</script>';
+  //if (!isset($_SESSION["isAdmin"])) echo '<script>$(".dropdown").hide(); $(".navbar-nav").hide()</script>';
 ?>

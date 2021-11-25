@@ -3,6 +3,7 @@ script.src = 'https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js';
 script.type = 'text/javascript';
 document.getElementsByTagName('head')[0].appendChild(script);
 
+
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-analytics.js";
 
@@ -25,7 +26,32 @@ import {getFirestore, doc, getDocs, setDoc, collection, addDoc, updateDoc, delet
 const db = getFirestore();
 
 function checking(users){
-    
+    let un = document.getElementById('formGroupExampleInput').value;
+    var pw = document.forms["myForm"]["password"].value;
+    console.log('executing checking');
+    users.forEach(u => {
+        validate(un, pw, u);
+    });
+}
+
+function validate(username, password, user){
+    console.log('executing validating');
+    console.log(username);
+    if ((user.email == username)&&(user.password = password)){
+        console.log(user);
+        if (user.Position == "Admin") {
+            window.sessionStorage.setItem("isAdmin", true);
+            console.log(sessionStorage.getItem('isAdmin'));
+        }
+        
+        sessionStorage.setItem("name", user.Name);
+        sessionStorage.setItem("id", user.Id);
+        sessionStorage.setItem("company", user.Company);
+        sessionStorage.setItem("department", user.Department);
+        sessionStorage.setItem("email", user.email);
+        sessionStorage.setItem("phoneNumber", user.PhoneNumber);
+        sessionStorage.setItem("is_login", true);
+    }
 }
   
 async function getAllDataOnce(){
@@ -34,7 +60,6 @@ async function getAllDataOnce(){
     querySnapshot.forEach(doc => {
         user.push(doc.data());
     });
-    console.log(user);
 
     checking(user);
 }

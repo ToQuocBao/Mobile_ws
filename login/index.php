@@ -61,13 +61,13 @@ if(isset($_SESSION['is_login'])) if($_SESSION["is_login"] == true) header("Locat
               <?php if(isset($_SESSION['is_login']) && $_SESSION['is_login'] == true) echo "Trang cá nhân";
                     else echo "Đăng nhập"; ?>
             </a>
-          <div class="logo"><img class="logo" src="../image/logo.png" alt=""></div>
+          
         </div>
       </nav>
     </div>
   </div>  
     <div class="container">
-        <form class="row justify-content-center" action="check.php" method="post" name='myForm'>
+        <form class="row justify-content-center" action="" method="post" name='myForm'>
             <?php if(isset($_SESSION["error"])):?>
             <div style="color:red" class="mb-3 col-md-7 text-center">
                 <p><?php echo $_SESSION["error"] ?></P>

@@ -26,7 +26,7 @@ elseif ($_SESSION["is_login"] == false)
         <div id="nav" class="sticky-nav">
         <nav class="navbar navbar-expand-lg ">
             <div class="container">
-            <a class="navbar-brand" href="../Home/Home.php">
+            <a class="navbar-brand" href="../Home">
                 Mercedes
             </a>
             <div class="dropdown">
@@ -34,34 +34,30 @@ elseif ($_SESSION["is_login"] == false)
                 <i class="fa fa-bars"></i>
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" aria-current="page" href="../Home/Home.php">Trang chủ</a>
-                <a class="dropdown-item" aria-current="page" href="../Introduce/Introduce.php">Giới thiệu</a>
-                <a class="dropdown-item" aria-current="page" href="../Product/Products.php">Sản phẩm</a>
-                <a class="dropdown-item" aria-current="page" href="../Price/Pricea200.php">Bảng giá</a>
-                <a href="../Contact/Contacts.php" class="dropdown-item" aria-current="page">Liên hệ</a>
-                <a class="dropdown-item" href="../account/index.php" class="nav-link" aria-current="page">
-                  <?php if(isset($_SESSION['is_login']) && $_SESSION['is_login'] == true) echo "Trang cá nhân";
-                        else echo "Đăng nhập"; ?>
+              <a class="dropdown-item" aria-current="page" href="../Home">Trang chủ</a>
+              <a class="dropdown-item" aria-current="page" href="../Employee">Nhân viên</a>
+              <a class="dropdown-item" aria-current="page" href="../Notify">Thông báo</a>
+              <a class="dropdown-item" aria-current="page" href="../Report">Báo cáo</a>
+              <?php if(isset($_SESSION['is_login'])):?>
+                <a class="dropdown-item" aria-current="page" href="../account/index.php">Trang cá nhân</a>
+              <?php endif ?>
                 </a>
                 </div>
             </div>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="../Home/Home.php">Trang chủ</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="../Introduce/Introduce.php">Giới thiệu</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="../Product/Products.php">Sản phẩm</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="../Price/Pricea200.php">Bảng giá</a>
-                </li>
-                <li class="nav-item">
-                    <a href="../Contact/Contacts.php" class="nav-link" aria-current="page">Liên hệ</a>
-                </li>
+                <a class="nav-link" aria-current="page" href="../Home">Trang chủ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../Employee">Nhân viên</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="../Notify">Thông báo</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="../Report">Báo cáo</a>
+              </li>
                 </ul>
             </div>
             <a href="../account/index.php" class="nav-link" aria-current="page">
