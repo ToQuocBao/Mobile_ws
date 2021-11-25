@@ -60,7 +60,7 @@ a:hover {
       #00A344,
       white
     ),
-    url(../image/background.jpg);
+    ;
   flex-direction: column;
   background-position: 0px 0px 100% 50%;
   background-size: auto, cover;

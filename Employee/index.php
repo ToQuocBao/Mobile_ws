@@ -5,7 +5,7 @@ session_start();
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <title>Mercedes</title>
+  <title>Quét mã QR</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="../image/logo.png" />
@@ -57,14 +57,28 @@ session_start();
               <?php if(isset($_SESSION['is_login']) && $_SESSION['is_login'] == true) echo "Trang cá nhân";
                     else echo "Đăng nhập"; ?>
             </a>
-          <div class="logo"><img class="logo" src="../image/logo.png" alt=""></div>
+          
         </div>
       </nav>
     </div>
   </div>
   
   <!-- Video -->
-  <div class ="my-display">
+  <div class ="my-display container">
+    <table class = "table ">
+      <thead>
+        <th>Mã số nhân viên</th>
+        <th>Họ và tên</th>
+        <th>Số điện thoại</th>
+        <th>Email</th>
+        <th>Công Ty</th>
+        <th>Phòng ban</th>
+        <th>Chức danh</th>
+      </thead>
+      <tbody id='tbody'>
+              
+      </tbody>
+    </table>
   </div>
 
 
@@ -114,7 +128,9 @@ session_start();
 </script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
-<script src="/index.js"></script>
-<script src="./script.js"></script>
+
+<script type="module" src="./script.js"></script>
+
+
 </body>
 </html>
