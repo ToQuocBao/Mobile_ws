@@ -67,7 +67,7 @@ if(isset($_SESSION['is_login'])) if($_SESSION["is_login"] == true) header("Locat
     </div>
   </div>  
     <div class="container">
-        <form class="row justify-content-center" action="check.php" method="post">
+        <form class="row justify-content-center" action="check.php" method="post" name='myForm'>
             <?php if(isset($_SESSION["error"])):?>
             <div style="color:red" class="mb-3 col-md-7 text-center">
                 <p><?php echo $_SESSION["error"] ?></P>
@@ -82,7 +82,7 @@ if(isset($_SESSION['is_login'])) if($_SESSION["is_login"] == true) header("Locat
                 <input type="password" name="password" size="25" class="form-control" id="formGroupExampleInput2" placeholder="Mật khẩu">
             </div>
             <div class="mb-3 col-md-6">
-            <input type="submit" name="login" value="Đăng nhập">
+            <input id = "submitBtn" type="submit" name="login" value="Đăng nhập">
             </div>
         </form>
     </div>
@@ -192,7 +192,7 @@ if(isset($_SESSION['is_login'])) if($_SESSION["is_login"] == true) header("Locat
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
-<script src="/index.js"></script>
+<script type = 'module' src="./check.js"></script>
 
 </body>
 </html>
