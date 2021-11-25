@@ -13,17 +13,13 @@ if(isset($_POST['login'])){
         header("Location: ./index.php");
     }
     else $mk = $_POST['password'];
-    print($_SESSION.toString());
     if($tk && $mk){
         if (!isset($_SESSION['is_login'])) {
             $_SESSION["error"] = "Thông tin đăng nhập không chính xác";
-            //header("location: ../login/");
+            $_SESSION['is_login'] = false;
         }
-        else {
-            $_SESSION['is_login'] = true;
-            header("location: ../Home/");
-        }
+        else $_SESSION['is_login'] = true;
     }
-    
+    header("location: ../Home/");
 }
 ?>

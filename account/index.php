@@ -37,7 +37,7 @@ elseif ($_SESSION["is_login"] == false)
               <a class="dropdown-item" aria-current="page" href="../Home">Trang chủ</a>
               <a class="dropdown-item" aria-current="page" href="../Employee">Nhân viên</a>
               <a class="dropdown-item" aria-current="page" href="../Notify">Thông báo</a>
-              <a class="dropdown-item" aria-current="page" href="../Report">Báo cáo</a>
+              <a class="dropdown-item" aria-current="page" href="../Request">Đơn xin</a>
               <?php if(isset($_SESSION['is_login'])):?>
                 <a class="dropdown-item" aria-current="page" href="../account/index.php">Trang cá nhân</a>
               <?php endif ?>
@@ -56,7 +56,7 @@ elseif ($_SESSION["is_login"] == false)
                 <a class="nav-link" aria-current="page" href="../Notify">Thông báo</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="../Report">Báo cáo</a>
+                <a class="nav-link" aria-current="page" href="../Request">Đơn xin</a>
               </li>
                 </ul>
             </div>
@@ -90,65 +90,6 @@ elseif ($_SESSION["is_login"] == false)
 <div class="page-wrapper">
   <div id="waterdrop"></div>
   <footer>
-    <div class="footer-top">
-      <div class="container">
-          <div class="customer-column">
-            <div class="widget footer_widget">
-              <h5 class="footer-title">Khách hàng</h5>
-              <p>Câu hỏi thường gặp</p>
-              <p>Hỗ trợ khách hàng</p>
-              <p>Hỗ trợ bảo trì</p>
-              <p>Hướng dẫn sử dụng</p>
-              <p>Lịch dịch vụ</p>
-              <p>Hướng dẫn thanh toán</p>
-            </div>
-          </div>
-              <div class="service-column">
-                <div class="widget footer_widget">
-                  <h5 class="footer-title">Dịch vụ</h5>
-                  <p>Bảo hành</p>
-                  <p>Thay thế thiết bị</p>
-                  <p>Sửa chữa</p>
-                  <p>Mua linh kiện phụ tùng</p>
-                  <p>Báo giá sản phẩm</p>
-                  <p>Mua xe mới</p>
-                </div>
-              </div>
-              <div class="about-us-column">
-                 <div class="widget widget_gallery gallery-grid-4">
-              <h5 class="footer-title">Về chúng tôi</h5>
-              <p>Giới thiệu</p>
-              <p>Chính sách đại lý</p>
-              <p>Thông báo</p>
-              <p>Khuyến mãi</p>
-              <p>Tài liệu</p>
-              <p>Blog</p>
-            </div>
-              </div>
-          <div class="contact-column">
-            <!-- <div class="widget widget_gallery gallery-grid-4">
-              <h5 class="footer-title">Dunno</h5>
-            </div> -->
-            <div class="widget">
-              <h5 class="footer-title">Phản hồi</h5>
-              <div class="textwidget">
-                <div role="form" class="wpcf7" id="wpcf7-f4-o1" lang="en-US" dir="ltr">
-
-                  <form method="post" class="wpcf7-form" novalidate="novalidate">
-
-                    <div class="contact-form-footer">
-                      <p><span class="wpcf7-form-control-wrap your-first-name"><input type="text" name="your-first-name" value="" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false" placeholder="Your name"></span></p>
-                      <p><span class="wpcf7-form-control-wrap your-email_1"><input type="email" name="your-email_1" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-email" aria-invalid="false" placeholder="Your email"></span></p>
-                      <p><span class="wpcf7-form-control-wrap your-message"><textarea name="your-message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" placeholder="Your message"></textarea></span></p>
-                      <div><input type="submit" value="Send" class="wpcf7-form-control wpcf7-submit"><span class="ajax-loader"></span></div>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-      </div>
-    </div>
     <div class="footer-bottom">
       <div class="container-last">
             <nav id="footer-navigation" class="site-navigation footer-navigation centered-box">

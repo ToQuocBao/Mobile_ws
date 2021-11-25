@@ -63,7 +63,7 @@ function AddRow(id, name, phoneNumber, email, company, department, position){
 }
 
 async function getAllDataOnce(){
-    const querySnapshot = await getDocs(collection(db, "User"));
+    const querySnapshot = await getDocs(collection(db, "RequestLeave"));
     var user =[];
     querySnapshot.forEach(doc => {
         user.push(doc.data());

@@ -2,7 +2,7 @@ var script = document.createElement('script');
 script.src = 'https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js';
 script.type = 'text/javascript';
 document.getElementsByTagName('head')[0].appendChild(script);
-
+var users = [];
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-analytics.js";
@@ -25,7 +25,7 @@ import {getFirestore, doc, getDocs, setDoc, collection, addDoc, updateDoc, delet
 
 const db = getFirestore();
 
-function checking(users){
+function checking(){
     let un = document.getElementById('formGroupExampleInput').value;
     var pw = document.forms["myForm"]["password"].value;
     console.log('executing checking');
@@ -50,18 +50,17 @@ function validate(username, password, user){
         sessionStorage.setItem("department", user.Department);
         sessionStorage.setItem("email", user.email);
         sessionStorage.setItem("phoneNumber", user.PhoneNumber);
-        sessionStorage.setItem("is_login", true);
+        sessionStorage.setItem("isLogin", true);
     }
 }
   
 async function getAllDataOnce(){
     const querySnapshot = await getDocs(collection(db, "User"));
-    var user =[];
     querySnapshot.forEach(doc => {
-        user.push(doc.data());
+        users.push(doc.data());
     });
-
-    checking(user);
 }
 
-window.onload = document.getElementById("submitBtn").addEventListener('click', getAllDataOnce);
+
+document.getElementById("submitBtn").addEventListener('click', checking);
+window.onload = getAllDataOnce;

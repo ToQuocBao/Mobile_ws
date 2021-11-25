@@ -32,7 +32,7 @@ session_start();
               <a class="dropdown-item" aria-current="page" href="../Home">Trang chủ</a>
               <a class="dropdown-item" aria-current="page" href="../Employee">Nhân viên</a>
               <a class="dropdown-item" aria-current="page" href="../Notify">Thông báo</a>
-              <a class="dropdown-item" aria-current="page" href="../Report">Báo cáo</a>
+              <a class="dropdown-item" aria-current="page" href="../Request">Đơn xin</a>
               <?php if(isset($_SESSION['is_login'])):?>
                 <a class="dropdown-item" aria-current="page" href="../account/index.php">Trang cá nhân</a>
               <?php endif ?>
@@ -50,7 +50,7 @@ session_start();
                 <a class="nav-link" aria-current="page" href="../Notify">Thông báo</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="../Report">Báo cáo</a>
+                <a class="nav-link active" aria-current="page" href="../Request">Đơn xin</a>
               </li>
             </ul>
           </div>
@@ -65,7 +65,22 @@ session_start();
   </div>
   
   <!-- Video -->
-  <div class ="employee-display"></div>
+  <div class ="my-display container">
+    <table class = "table ">
+      <thead>
+        <th>Nhân viên</th>
+        <th>Loại nghỉ phép</th>
+        <th>Phòng ban</th>
+        <th>Ngày bắt đầu</th>
+        <th>Ngày kết thúc</th>
+        <th>Tình trạng</th>
+        <th>Lý do</th>
+      </thead>
+      <tbody id='tbody'>
+              
+      </tbody>
+    </table>
+  </div>
 
 
 <div class="page-wrapper">
@@ -114,7 +129,7 @@ session_start();
 </script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
-<script src="/index.js"></script>
+<script type = 'module' src="./script.js"></script>
 
 </body>
 </html>

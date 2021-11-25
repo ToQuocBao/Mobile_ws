@@ -5,7 +5,7 @@ if(isset($_SESSION['is_login'])) if($_SESSION["is_login"] == true) header("Locat
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <title>Quét mã QR</title>
+  <title>Mercedes</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="../image/logo.png" />
@@ -35,7 +35,7 @@ if(isset($_SESSION['is_login'])) if($_SESSION["is_login"] == true) header("Locat
               <a class="dropdown-item" aria-current="page" href="../Home">Trang chủ</a>
               <a class="dropdown-item" aria-current="page" href="../Employee">Nhân viên</a>
               <a class="dropdown-item" aria-current="page" href="../Notify">Thông báo</a>
-              <a class="dropdown-item" aria-current="page" href="../Report">Báo cáo</a>
+              <a class="dropdown-item" aria-current="page" href="../Request">Đơn xin</a>
               <?php if(isset($_SESSION['is_login'])):?>
                 <a class="dropdown-item" aria-current="page" href="../account/index.php">Trang cá nhân</a>
               <?php endif ?>
@@ -53,7 +53,7 @@ if(isset($_SESSION['is_login'])) if($_SESSION["is_login"] == true) header("Locat
                 <a class="nav-link" aria-current="page" href="../Notify">Thông báo</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="../Report">Báo cáo</a>
+                <a class="nav-link" aria-current="page" href="../Request">Báo cáo</a>
               </li>
             </ul>
           </div>
@@ -67,7 +67,7 @@ if(isset($_SESSION['is_login'])) if($_SESSION["is_login"] == true) header("Locat
     </div>
   </div>  
     <div class="container">
-        <form class="row justify-content-center" action="" method="post" name='myForm'>
+        <form class="row justify-content-center" action="check.php" method="post" name='myForm'>
             <?php if(isset($_SESSION["error"])):?>
             <div style="color:red" class="mb-3 col-md-7 text-center">
                 <p><?php echo $_SESSION["error"] ?></P>
