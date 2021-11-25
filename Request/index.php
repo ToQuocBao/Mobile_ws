@@ -75,6 +75,7 @@ session_start();
         <th>Ngày kết thúc</th>
         <th>Tình trạng</th>
         <th>Lý do</th>
+        <th><th>
       </thead>
       <tbody id='tbody'>
               

@@ -2,6 +2,7 @@ var script = document.createElement('script');
 script.src = 'https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js';
 script.type = 'text/javascript';
 document.getElementsByTagName('head')[0].appendChild(script);
+var user = [];
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-analytics.js";
@@ -35,36 +36,36 @@ function AddData(users){
 
 function AddRow(id, name, phoneNumber, email, company, department, position){
     var trow = document.createElement('tr');
-    var tid = document.createElement('td');
-    var tname = document.createElement('td');
-    var tphoneNumber = document.createElement('td');
-    var temail = document.createElement('td');
-    var tcompany = document.createElement('td');
-    var tdepartment = document.createElement('td');
-    var tposition = document.createElement('td');
+    var td1 = document.createElement('td');
+    var td2 = document.createElement('td');
+    var td3 = document.createElement('td');
+    var td4 = document.createElement('td');
+    var td5 = document.createElement('td');
+    var td6 = document.createElement('td');
+    var td7 = document.createElement('td');
 
-    tid.innerHTML = id;
-    tname.innerHTML = name;
-    tphoneNumber.innerHTML = phoneNumber;
-    temail.innerHTML = email;
-    tcompany.innerHTML = company;
-    tdepartment.innerHTML = department;
-    tposition.innerHTML = position;
+    td1.innerHTML = id;
+    td2.innerHTML = name;
+    td3.innerHTML = phoneNumber;
+    td4.innerHTML = email;
+    td5.innerHTML = company;
+    td6.innerHTML = department;
+    td7.innerHTML = position;
 
-    trow.appendChild(tid);
-    trow.appendChild(tname);
-    trow.appendChild(tphoneNumber);
-    trow.appendChild(temail);
-    trow.appendChild(tcompany);
-    trow.appendChild(tdepartment);
-    trow.appendChild(tposition);
+    trow.appendChild(td1);
+    trow.appendChild(td2);
+    trow.appendChild(td3);
+    trow.appendChild(td4);
+    trow.appendChild(td5);
+    trow.appendChild(td6);
+    trow.appendChild(td7);
 
     tb.appendChild(trow);
 }
 
 async function getAllDataOnce(){
-    const querySnapshot = await getDocs(collection(db, "RequestLeave"));
-    var user =[];
+    const querySnapshot = await getDocs(collection(db, "RequestLeave/user1/request_leave_data"));
+    
     querySnapshot.forEach(doc => {
         user.push(doc.data());
     });
