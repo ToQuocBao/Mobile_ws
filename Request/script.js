@@ -2,7 +2,7 @@ var script = document.createElement('script');
 script.src = 'https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js';
 script.type = 'text/javascript';
 document.getElementsByTagName('head')[0].appendChild(script);
-var user = [];
+
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-analytics.js";
@@ -25,16 +25,20 @@ import {getFirestore, doc, getDocs, setDoc, collection, addDoc, updateDoc, delet
 
 const db = getFirestore();
   
-const tb = document.getElementById('tbody');
+const tbRequest = document.getElementById('tbody-leave-request');
 
-function AddData(users){
-    tbody.innerHTML = "";
+function AddLeaveRequest(users){
+    console.log(users);
+    tbRequest.innerHTML = "";
     users.forEach(element => {
-        AddRow(element.Id, element.Name, element.PhoneNumber, element.email, element.Company, element.Department, element.Position);
+        AddLeaveRequestRow(element.id, element.name, element.jobTitle, element.typeLeave, element.branch, element.department, element.registerDay, element.startDate + ' ' + element.startTime, element.endDate + ' ' + element.endTime, element.state, element.reason);
     })
 }
 
-function AddRow(id, name, phoneNumber, email, company, department, position){
+function AddLeaveRequestRow(id, name, jobTitle, typeLeave, branch, department, registerDay, startDate, endDate, state){
+
+    console.log("a");
+
     var trow = document.createElement('tr');
     var td1 = document.createElement('td');
     var td2 = document.createElement('td');
@@ -43,14 +47,24 @@ function AddRow(id, name, phoneNumber, email, company, department, position){
     var td5 = document.createElement('td');
     var td6 = document.createElement('td');
     var td7 = document.createElement('td');
+    var td8 = document.createElement('td');
+    var td9 = document.createElement('td');
+    var td10 = document.createElement('td');
+    var td11 = document.createElement('td');
+    var td12 = document.createElement('td');
 
     td1.innerHTML = id;
     td2.innerHTML = name;
-    td3.innerHTML = phoneNumber;
-    td4.innerHTML = email;
-    td5.innerHTML = company;
+    td3.innerHTML = jobTitle;
+    td4.innerHTML = typeLeave;
+    td5.innerHTML = branch;
     td6.innerHTML = department;
-    td7.innerHTML = position;
+    td7.innerHTML = registerDay;
+    td8.innerHTML = startDate;
+    td9.innerHTML = endDate;
+    td10.innerHTML = state;
+    td11.innerHTML = reason;
+    td12.innerHTML = '';
 
     trow.appendChild(td1);
     trow.appendChild(td2);
@@ -59,18 +73,38 @@ function AddRow(id, name, phoneNumber, email, company, department, position){
     trow.appendChild(td5);
     trow.appendChild(td6);
     trow.appendChild(td7);
+    trow.appendChild(td8);
+    trow.appendChild(td9);
+    trow.appendChild(td10);
+    trow.appendChild(td11);
+    trow.appendChild(td12);
+    tbRequest.appendChild(trow);
+}
 
-    tb.appendChild(trow);
+async function get_leave_request(data, leave_request){
+    const querySnapshot = await getDocs(collection(db, "RequestLeave/" + data.path + "/request_leave_data"));
+    querySnapshot.forEach(doc => {
+        leave_request.push(doc.data());
+    });
+}
+
+async function get_overtime_(data, overtime){
+    const querySnapshot = await getDocs(collection(db, "RequestLeave/" + data.path + "/overtime_data"));
+    querySnapshot.forEach(doc => {
+        overtime.push(doc.data());
+    });
 }
 
 async function getAllDataOnce(){
-    const querySnapshot = await getDocs(collection(db, "RequestLeave/user1/request_leave_data"));
-    
+    const querySnapshot = await getDocs(collection(db, "RequestLeave"));
+    var leave_request = [];
+    var overtime = [];
     querySnapshot.forEach(doc => {
-        user.push(doc.data());
+        var data = doc.data();
+        get_leave_request(data, leave_request);
+        get_overtime_(data, overtime);
     });
-    console.log(user);
-
-    AddData(user);
+    console.log(leave_request);
+    AddLeaveRequest(leave_request);
 }
 window.onload = getAllDataOnce;

@@ -49,7 +49,7 @@ session_start();
                 <a class="nav-link" aria-current="page" href="../Notify">Thông báo</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="../Request">Báo cáo</a>
+                <a class="nav-link" aria-current="page" href="../Request">Đơn xin</a>
               </li>
             </ul>
           </div>

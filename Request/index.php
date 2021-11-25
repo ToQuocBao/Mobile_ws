@@ -58,7 +58,6 @@ session_start();
               <?php if(isset($_SESSION['is_login']) && $_SESSION['is_login'] == true) echo "Trang cá nhân";
                     else echo "Đăng nhập"; ?>
             </a>
-          <div class="logo"><img class="logo" src="../image/logo.png" alt=""></div>
         </div>
       </nav>
     </div>
@@ -68,16 +67,41 @@ session_start();
   <div class ="my-display container">
     <table class = "table ">
       <thead>
+        <th>Id</th>
         <th>Nhân viên</th>
+        <th>Vị trí</th>
         <th>Loại nghỉ phép</th>
+        <th>Chi nhánh</th>
         <th>Phòng ban</th>
+        <th>Ngày lập đơn</th>
         <th>Ngày bắt đầu</th>
         <th>Ngày kết thúc</th>
         <th>Tình trạng</th>
         <th>Lý do</th>
         <th><th>
       </thead>
-      <tbody id='tbody'>
+      <tbody id='tbody-leave-request'>
+              
+      </tbody>
+    </table>
+    <br>
+
+    <table class = "table ">
+      <thead>
+        <th>Id</th>
+        <th>Nhân viên</th>
+        <th>Loại nghỉ phép</th>
+        <th>Chi nhánh</th>
+        <th>Phòng ban</th>
+        <th>Ngày lập đơn</th>
+        <th>Ngày Tăng ca</th>
+        <th>Giờ bắt đầu</th>
+        <th>Giờ kết thúc</th>
+        <th>Tình trạng</th>
+        <th>Lý do</th>
+        <th><th>
+      </thead>
+      <tbody id='tbody-overtime'>
               
       </tbody>
     </table>
