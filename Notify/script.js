@@ -3,6 +3,7 @@ script.src = 'https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js';
 script.type = 'text/javascript';
 document.getElementsByTagName('head')[0].appendChild(script);
 
+
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-analytics.js";
 
@@ -24,52 +25,70 @@ import {getFirestore, doc, getDocs, setDoc, collection, addDoc, updateDoc, delet
 
 const db = getFirestore();
   
-const tb = document.getElementById('tbody');
-
-function AddData(users){
-    tbody.innerHTML = "";
-    users.forEach(element => {
-        AddRow(element.Id, element.Name, element.PhoneNumber, element.email, element.Company, element.Department, element.Position);
-    })
+const noti = document.getElementById('notification');
+//add leave request
+function AddNotification(element, path){
+    AddNotificationRow(element.title, element.date_send, element.data, element.address, element.email, element.telephone, element.type, path);
 }
 
-function AddRow(id, name, phoneNumber, email, company, department, position){
-    var trow = document.createElement('tr');
-    var tid = document.createElement('td');
-    var tname = document.createElement('td');
-    var tphoneNumber = document.createElement('td');
-    var temail = document.createElement('td');
-    var tcompany = document.createElement('td');
-    var tdepartment = document.createElement('td');
-    var tposition = document.createElement('td');
+function AddNotificationRow(title, date_send, data, address, email, telephone, type, path){
 
-    tid.innerHTML = id;
-    tname.innerHTML = name;
-    tphoneNumber.innerHTML = phoneNumber;
-    temail.innerHTML = email;
-    tcompany.innerHTML = company;
-    tdepartment.innerHTML = department;
-    tposition.innerHTML = position;
+    var div = document.createElement('div');
+    var td2 = document.createElement('h3');
+    var td3 = document.createElement('div');
+    var td4 = document.createElement('p');
+    var td5 = document.createElement('div');
+    var td6 = document.createElement('div');
+    var td7 = document.createElement('div');
+    var td8 = document.createElement('div');
 
-    trow.appendChild(tid);
-    trow.appendChild(tname);
-    trow.appendChild(tphoneNumber);
-    trow.appendChild(temail);
-    trow.appendChild(tcompany);
-    trow.appendChild(tdepartment);
-    trow.appendChild(tposition);
 
-    tb.appendChild(trow);
+    div.style.width = "100%";
+    td3.style.fontSize = "15px";
+    td4.style.fontSize = "30px";
+    td4.style.margin = "20px";
+    td5.style.fontSize = "15px";
+    td6.style.fontSize = "15px";
+    td7.style.fontSize = "15px";
+    td8.style.fontSize = "15px";
+
+    td2.innerHTML = title;
+    td3.innerHTML = date_send;
+    td4.innerHTML = data;
+    td5.innerHTML = 'Địa chỉ: ' + address;
+    td6.innerHTML = 'email: ' + email;
+    td7.innerHTML = 'telephone: ' + telephone;
+    td8.innerHTML = 'type:' + type;
+
+    div.appendChild(td2);
+    div.appendChild(td3);
+    div.appendChild(document.createElement("hr"));
+    div.appendChild(td4);
+    div.appendChild(document.createElement("hr"));
+    div.appendChild(td5);
+    div.appendChild(td6);
+    div.appendChild(td7);
+    div.appendChild(td8);
+
+    noti.appendChild(div);
 }
+
+
+
+async function get_notification(data){
+    const querySnapshot = await getDocs(collection(db, "Notification/" + data.path + "/Notification_data"));
+    querySnapshot.forEach(doc => {
+        //leave_request.push(doc.data());
+        AddNotification(doc.data(),data.path);
+    });
+}
+
 
 async function getAllDataOnce(){
-    const querySnapshot = await getDocs(collection(db, "User"));
-    var user =[];
+    const querySnapshot = await getDocs(collection(db, "RequestLeave"));
     querySnapshot.forEach(doc => {
-        user.push(doc.data());
+        var data = doc.data();
+        get_notification(data);
     });
-    console.log(user);
-
-    AddData(user);
 }
 window.onload = getAllDataOnce;
