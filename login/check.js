@@ -64,4 +64,4 @@ async function getAllDataOnce(){
     checking(user);
 }
 
-document.getElementById("submitBtn").addEventListener('click', getAllDataOnce);
+window.onload = document.getElementById("submitBtn").addEventListener('click', getAllDataOnce);

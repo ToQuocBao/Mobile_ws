@@ -12,7 +12,7 @@ if(isset($_POST['subcomment'])){
         $servername = "localhost";
         $username = "root";
         $password = "";
-        $dbname = "mercedes";
+        $dbname = "Quét mã QR";
         $check = $_SESSION["is_login"] = false;
 
         // Create connection

@@ -27,7 +27,7 @@ elseif ($_SESSION["is_login"] == false)
         <nav class="navbar navbar-expand-lg ">
             <div class="container">
             <a class="navbar-brand" href="../Home">
-                Mercedes
+                Quét mã QR
             </a>
             <div class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

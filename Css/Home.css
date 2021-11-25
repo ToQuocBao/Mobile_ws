@@ -783,6 +783,10 @@ footer .widget ul {
 @media only screen and (max-width: 320px) {
 }
 
-.my-display > table{
+.my-display {
+  min-height: 200px;
+}
 
+#tbody{
+  min-height: 50px;
 }
