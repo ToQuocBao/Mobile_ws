@@ -45,13 +45,13 @@ if(isset($_POST['login'])){
                     $_SESSION["sdt"] = $row["PhoneNum"];
                     $_SESSION["email"] = $row["Email"];
                     $_SESSION["error"] = "Đăng nhập thành công";
-                    header("Location: http://localhost/WEB-ASSIGNMENT_1-main/account/index.php");
+                    header("Location: ./index.php");
                     break;
                 }
                 else {
                     $_SESSION["is_login"] = false;
                     $_SESSION["error"] = "Nhập sai thông tin";
-                    header("Location: http://localhost/WEB-ASSIGNMENT_1-main/login/index.php");
+                    header("Location: ./index.php");
                 }
             }
         } else {
