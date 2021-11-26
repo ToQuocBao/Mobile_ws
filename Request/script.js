@@ -57,9 +57,9 @@ function AddLeaveRequestRow(id, name, jobTitle, typeLeave, branch, department, r
     td7.innerHTML = registerDay;
     td8.innerHTML = startDate;
     td9.innerHTML = endDate;
-    td10.innerHTML = a;
     td11.innerHTML = reason;
     if (a == 2){
+        td10.innerHTML = 'Chờ duyệt';
         var approve = async function(){
             var ref = doc(db, "RequestLeave/" + path + "/request_leave_data/" + id + '/');
             console.log(ref);
@@ -92,7 +92,11 @@ function AddLeaveRequestRow(id, name, jobTitle, typeLeave, branch, department, r
         td12.appendChild(dBtn);
         
     }
-    else td12.innerHTML = '';
+    else {
+        td12.innerHTML = '';
+        if (a == 1) td11.innerHTML = 'Bác bỏ';
+        else td11.innerHTML = 'Đã duyệt';
+    }
 
     trow.appendChild(td2);
     trow.appendChild(td3);
@@ -136,10 +140,9 @@ function AddOvertimeRow(id, name, jobTitle, branch, department, registerDay, ove
     td8.innerHTML = hourStart;
     td9.innerHTML = hourEnd;
     td10.innerHTML = reason;
-    td11.innerHTML = a;
     td12.style.width = '80px';
     if (a == 2){
-
+        td11.innerHTML = 'Chờ duyệt';
         var approve = async function(){
             var ref = doc(db, "RequestLeave/" + path + "/overtime_data/" + id + '/');
             console.log(ref);
@@ -172,7 +175,11 @@ function AddOvertimeRow(id, name, jobTitle, branch, department, registerDay, ove
         td12.appendChild(dBtn);
         
     }
-    else td12.innerHTML = '';
+    else {
+        td12.innerHTML = '';
+        if (a == 1) td11.innerHTML = 'Bác bỏ';
+        else td11.innerHTML = 'Đã duyệt';
+    }
 
     trow.appendChild(td2);
     trow.appendChild(td3);
