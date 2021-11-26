@@ -4,6 +4,7 @@ script.type = 'text/javascript';
 document.getElementsByTagName('head')[0].appendChild(script);
 var users = [];
 
+
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-analytics.js";
 
@@ -26,8 +27,12 @@ import {getFirestore, doc, getDocs, setDoc, collection, addDoc, updateDoc, delet
 const db = getFirestore();
 
 function checking(){
+    getAllDataOnce();
+    console.log(users);
+    window.location.href = "login.php";
     let un = document.getElementById('formGroupExampleInput').value;
     var pw = document.forms["myForm"]["password"].value;
+
     console.log('executing checking');
     users.forEach(u => {
         validate(un, pw, u);
@@ -52,7 +57,7 @@ function validate(username, password, user){
         sessionStorage.setItem("phoneNumber", user.PhoneNumber);
         sessionStorage.setItem("isLogin", true);
         console.log('a');
-        window.location.replace("./login.php");
+        
     }
 }
   
@@ -64,5 +69,4 @@ async function getAllDataOnce(){
 }
 
 
-document.getElementById("submitBtn").addEventListener('click', checking);
-window.onload = getAllDataOnce;
+document.getElementById("myForm").addEventListener('submid', checking);

@@ -1,10 +1,10 @@
 <?php
 session_start();
 if(!isset($_SESSION['is_login'])){
-  header("Location: ../login/index.php");
+  //header("Location: ../login/index.php");
 }
 elseif ($_SESSION["is_login"] == false)
-  header("Location: ../login/index.php");
+  //header("Location: ../login/index.php");
 ?>
 <!DOCTYPE html>
 <html lang="vi">
