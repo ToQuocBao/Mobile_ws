@@ -106,8 +106,8 @@ function AddLeaveRequestRow(id, name, jobTitle, typeLeave, branch, department, r
     trow.appendChild(td7);
     trow.appendChild(td8);
     trow.appendChild(td9);
-    trow.appendChild(td10);
     trow.appendChild(td11);
+    trow.appendChild(td10);
     trow.appendChild(td12);
     tbRequest.appendChild(trow);
 }
