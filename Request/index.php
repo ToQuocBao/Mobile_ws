@@ -71,8 +71,8 @@ session_start();
         <th>Ngày lập đơn</th>
         <th>Ngày bắt đầu</th>
         <th>Ngày kết thúc</th>
-        <th>Tình trạng</th>
         <th>Lý do</th>
+        <th>Tình trạng</th>
         <th><th>
       </thead>
       <tbody id='tbody-leave-request'>
