@@ -87,45 +87,6 @@ elseif ($_SESSION["is_login"] == false)
         </div>
     </div>
 
-<div class="page-wrapper">
-  <div id="waterdrop"></div>
-  <footer>
-    <div class="footer-bottom">
-      <div class="container-last">
-            <nav id="footer-navigation" class="site-navigation footer-navigation centered-box">
-              <ul id="footer-menu" class="nav-menu styled clearfix inline-inside">
-                <li id="menu-item-26" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-26"><a href="#">Bản quyền nội dung</a></li>
-                <li id="menu-item-27" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-27"><a href="#">Cài đặt</a></li>
-                <li id="menu-item-28" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-28"><a href="#">Quyền riêng tư và bảo vệ dữ liệu</a></li>
-                <li id="menu-item-29" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-29"><a href="#">Thông tin pháp lý</a></li>
-              </ul>
-            </nav>
-
-            <div id="footer-socials">
-              <div class="socials inline-inside socials-colored">
-
-                <a href="#" target="_blank" title="Facebook" class="socials-item facebook">
-                  <i class="fa fa-facebook-official" aria-hidden="true"></i>
-                </a>
-                <a href="#" target="_blank" title="Twitter" class="socials-item twitter">
-                  <i class="fa fa-twitter-square" aria-hidden="true"></i>
-
-                </a>
-                <a href="#" target="_blank" title="Instagram" class="socials-item instagram">
-                  <i class="fa fa-instagram" aria-hidden="true"></i>
-                </a>
-                <a href="#" target="_blank" title="YouTube" class="socials-item youtube">
-                  <i class="fa fa-youtube-play" aria-hidden="true"></i>
-                </a>
-                <a href="#" target="_blank" title="Telegram" class="socials-item telegram">
-                  <i class="fa fa-telegram" aria-hidden="true"></i>
-                </a>
-              </div>
-            </div>
-      </div>
-    </div>
-  </footer>
-</div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 <script src="https://daniellaharel.com/raindrops/js/raindrops.js"></script>

@@ -51,6 +51,8 @@ function validate(username, password, user){
         sessionStorage.setItem("email", user.email);
         sessionStorage.setItem("phoneNumber", user.PhoneNumber);
         sessionStorage.setItem("isLogin", true);
+        console.log('a');
+        window.location.replace("./login.php");
     }
 }
   

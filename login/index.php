@@ -67,7 +67,7 @@ if(isset($_SESSION['is_login'])) if($_SESSION["is_login"] == true) header("Locat
     </div>
   </div>  
     <div class="container">
-        <form class="row justify-content-center" action="check.php" method="post" name='myForm'>
+        <form class="row justify-content-center" action="" method="post" name='myForm'>
             <?php if(isset($_SESSION["error"])):?>
             <div style="color:red" class="mb-3 col-md-7 text-center">
                 <p><?php echo $_SESSION["error"] ?></P>
@@ -87,104 +87,6 @@ if(isset($_SESSION['is_login'])) if($_SESSION["is_login"] == true) header("Locat
         </form>
     </div>
 
-<div class="page-wrapper">
-  <div id="waterdrop"></div>
-  <footer>
-    <div class="footer-top">
-      <div class="container">
-          <div class="customer-column">
-            <div class="widget footer_widget">
-              <h5 class="footer-title">Khách hàng</h5>
-              <p>Câu hỏi thường gặp</p>
-              <p>Hỗ trợ khách hàng</p>
-              <p>Hỗ trợ bảo trì</p>
-              <p>Hướng dẫn sử dụng</p>
-              <p>Lịch dịch vụ</p>
-              <p>Hướng dẫn thanh toán</p>
-            </div>
-          </div>
-              <div class="service-column">
-                <div class="widget footer_widget">
-                  <h5 class="footer-title">Dịch vụ</h5>
-                  <p>Bảo hành</p>
-                  <p>Thay thế thiết bị</p>
-                  <p>Sửa chữa</p>
-                  <p>Mua linh kiện phụ tùng</p>
-                  <p>Báo giá sản phẩm</p>
-                  <p>Mua xe mới</p>
-                </div>
-              </div>
-              <div class="about-us-column">
-                 <div class="widget widget_gallery gallery-grid-4">
-              <h5 class="footer-title">Về chúng tôi</h5>
-              <p>Giới thiệu</p>
-              <p>Chính sách đại lý</p>
-              <p>Thông báo</p>
-              <p>Khuyến mãi</p>
-              <p>Tài liệu</p>
-              <p>Blog</p>
-            </div>
-              </div>
-          <div class="contact-column">
-            <!-- <div class="widget widget_gallery gallery-grid-4">
-              <h5 class="footer-title">Dunno</h5>
-            </div> -->
-            <div class="widget">
-              <h5 class="footer-title">Phản hồi</h5>
-              <div class="textwidget">
-                <div role="form" class="wpcf7" id="wpcf7-f4-o1" lang="en-US" dir="ltr">
-
-                  <form method="post" class="wpcf7-form" novalidate="novalidate">
-
-                    <div class="contact-form-footer">
-                      <p><span class="wpcf7-form-control-wrap your-first-name"><input type="text" name="your-first-name" value="" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false" placeholder="Your name"></span></p>
-                      <p><span class="wpcf7-form-control-wrap your-email_1"><input type="email" name="your-email_1" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-email" aria-invalid="false" placeholder="Your email"></span></p>
-                      <p><span class="wpcf7-form-control-wrap your-message"><textarea name="your-message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" placeholder="Your message"></textarea></span></p>
-                      <div><input type="submit" value="Send" class="wpcf7-form-control wpcf7-submit"><span class="ajax-loader"></span></div>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <div class="container-last">
-            <nav id="footer-navigation" class="site-navigation footer-navigation centered-box">
-              <ul id="footer-menu" class="nav-menu styled clearfix inline-inside">
-                <li id="menu-item-26" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-26"><a href="#">Bản quyền nội dung</a></li>
-                <li id="menu-item-27" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-27"><a href="#">Cài đặt</a></li>
-                <li id="menu-item-28" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-28"><a href="#">Quyền riêng tư và bảo vệ dữ liệu</a></li>
-                <li id="menu-item-29" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-29"><a href="#">Thông tin pháp lý</a></li>
-              </ul>
-            </nav>
-
-            <div id="footer-socials">
-              <div class="socials inline-inside socials-colored">
-
-                <a href="#" target="_blank" title="Facebook" class="socials-item facebook">
-                  <i class="fa fa-facebook-official" aria-hidden="true"></i>
-                </a>
-                <a href="#" target="_blank" title="Twitter" class="socials-item twitter">
-                  <i class="fa fa-twitter-square" aria-hidden="true"></i>
-
-                </a>
-                <a href="#" target="_blank" title="Instagram" class="socials-item instagram">
-                  <i class="fa fa-instagram" aria-hidden="true"></i>
-                </a>
-                <a href="#" target="_blank" title="YouTube" class="socials-item youtube">
-                  <i class="fa fa-youtube-play" aria-hidden="true"></i>
-                </a>
-                <a href="#" target="_blank" title="Telegram" class="socials-item telegram">
-                  <i class="fa fa-telegram" aria-hidden="true"></i>
-                </a>
-              </div>
-            </div>
-      </div>
-    </div>
-  </footer>
-</div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 <script src="https://daniellaharel.com/raindrops/js/raindrops.js"></script>
