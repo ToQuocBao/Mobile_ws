@@ -790,3 +790,7 @@ footer .widget ul {
 #tbody{
   min-height: 50px;
 }
+
+.noti-date{
+  font-size: 10px;
+}
