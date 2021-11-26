@@ -34,7 +34,7 @@ function AddLeaveRequest(element, path){
     AddLeaveRequestRow(element.id, element.name, element.jobTitle, element.typeLeave, element.branch, element.department, element.registerDay, element.startDay + ' ' + element.startTime, element.endDay + ' ' + element.endTime, element.state, element.reason, path);
 }
 
-function AddLeaveRequestRow(id, name, jobTitle, typeLeave, branch, department, registerDay, startDate, endDate, state, reason, path){
+function AddLeaveRequestRow(id, name, jobTitle, typeLeave, branch, department, registerDay, startDate, endDate, a, reason, path){
 
     var trow = document.createElement('tr');
     var td2 = document.createElement('td');
@@ -57,9 +57,42 @@ function AddLeaveRequestRow(id, name, jobTitle, typeLeave, branch, department, r
     td7.innerHTML = registerDay;
     td8.innerHTML = startDate;
     td9.innerHTML = endDate;
-    td10.innerHTML = state;
+    td10.innerHTML = a;
     td11.innerHTML = reason;
-    td12.innerHTML = '';
+    if (a == 2){
+        var approve = async function(){
+            var ref = doc(db, "RequestLeave/" + path + "/request_leave_data/" + id + '/');
+            console.log(ref);
+            await updateDoc(ref, {
+                state: 3
+            });
+        }
+
+        var decline = async function(){
+            var ref = doc(db, "RequestLeave/" + path + "/request_leave_data/" + id + '/');
+            console.log(ref);
+            await updateDoc(ref, {
+                state: 1
+            });
+        }
+
+        var aBtn = document.createElement('button');
+        aBtn.innerHTML = "Duyệt";
+        aBtn.style.width = '80px';
+        aBtn.style.backgroundColor = '#00ff6a';
+        aBtn.addEventListener("click", approve.bind(id, path));
+        var dBtn = document.createElement('button');
+        dBtn.innerHTML = "Duyệt";
+        dBtn.style.width = '80px';
+        dBtn.style.backgroundColor = '#ff0000';
+        dBtn.innerHTML = "Từ chối";
+        dBtn.addEventListener("click", decline.bind(id, path));
+
+        td12.appendChild(aBtn);
+        td12.appendChild(dBtn);
+        
+    }
+    else td12.innerHTML = '';
 
     trow.appendChild(td2);
     trow.appendChild(td3);
@@ -75,12 +108,11 @@ function AddLeaveRequestRow(id, name, jobTitle, typeLeave, branch, department, r
     tbRequest.appendChild(trow);
 }
 
-//add overtime request
 function AddOvertime(element, path){
     AddOvertimeRow(element.id, element.name, element.jobTitle, element.branch, element.department, element.registerDay, element.overtimeDay, element.hourStart, element.hourEnd, element.reason, element.state, path);
 }
 
-function AddOvertimeRow(id, name, jobTitle, branch, department, registerDay, overtimeDay, hourStart, hourEnd, reason, state, path){
+function AddOvertimeRow(id, name, jobTitle, branch, department, registerDay, overtimeDay, hourStart, hourEnd, reason, a, path){
 
     var trow = document.createElement('tr');
     var td2 = document.createElement('td');
@@ -104,13 +136,41 @@ function AddOvertimeRow(id, name, jobTitle, branch, department, registerDay, ove
     td8.innerHTML = hourStart;
     td9.innerHTML = hourEnd;
     td10.innerHTML = reason;
-    td11.innerHTML = state;
-    if (state == 2){
+    td11.innerHTML = a;
+    td12.style.width = '80px';
+    if (a == 2){
+
+        var approve = async function(){
+            var ref = doc(db, "RequestLeave/" + path + "/overtime_data/" + id + '/');
+            console.log(ref);
+            await updateDoc(ref, {
+                state: 3
+            });
+        }
+
+        var decline = async function(){
+            var ref = doc(db, "RequestLeave/" + path + "/overtime_data/" + id + '/');
+            console.log(ref);
+            await updateDoc(ref, {
+                state: 1
+            });
+        }
+
         var aBtn = document.createElement('button');
+        aBtn.innerHTML = "Duyệt";
+        aBtn.style.width = '80px';
+        aBtn.style.backgroundColor = '#00ff6a';
+        aBtn.addEventListener("click", approve.bind(id, path));
         var dBtn = document.createElement('button');
-        aBtn.addEventListener("click", (id, state)=>{
-            
-        })
+        dBtn.innerHTML = "Duyệt";
+        dBtn.style.width = '80px';
+        dBtn.style.backgroundColor = '#ff0000';
+        dBtn.innerHTML = "Từ chối";
+        dBtn.addEventListener("click", decline.bind(id, path));
+
+        td12.appendChild(aBtn);
+        td12.appendChild(dBtn);
+        
     }
     else td12.innerHTML = '';
 
@@ -131,19 +191,24 @@ function AddOvertimeRow(id, name, jobTitle, branch, department, registerDay, ove
 
 
 async function get_leave_request(data){
-    const querySnapshot = await getDocs(collection(db, "RequestLeave/" + data.path + "/request_leave_data"));
-    querySnapshot.forEach(doc => {
-        //leave_request.push(doc.data());
-        AddLeaveRequest(doc.data(),data.path);
-    });
+    const dbRef = collection(db, 'RequestLeave', data.path, 'request_leave_data');
+    onSnapshot(dbRef, (querySnapshot) =>{
+        tbRequest.innerHTML = '';
+        querySnapshot.forEach(doc=>{
+            AddLeaveRequest(doc.data(),data.path);
+        })
+    })
 }
 
+
 async function get_overtime_(data){
-    const querySnapshot = await getDocs(collection(db, "RequestLeave/" + data.path + "/overtime_data"));
-    querySnapshot.forEach(doc => {
-        //overtime.push(doc.data());
-        AddOvertime(doc.data(),data.path);
-    });
+    const dbRef = collection(db, 'RequestLeave', data.path, 'overtime_data');
+    onSnapshot(dbRef, (querySnapshot) =>{
+        tbOvertime.innerHTML = '';
+        querySnapshot.forEach(doc=>{
+            AddOvertime(doc.data(),data.path);
+        })
+    })
 }
 
 async function getAllDataOnce(){
