@@ -36,16 +36,18 @@ function AddNotificationRow(title, date_send, data, address, email, telephone, t
     var div = document.createElement('div');
     var td2 = document.createElement('h3');
     var td3 = document.createElement('div');
-    var td4 = document.createElement('p');
+    var td4 = document.createElement('div');
     var td5 = document.createElement('div');
     var td6 = document.createElement('div');
     var td7 = document.createElement('div');
     var td8 = document.createElement('div');
 
+    div.style.margin = "2.5%";
+    div.style.float = "left";
 
-    div.style.width = "100%";
+    div.style.width = "45%";
     td3.style.fontSize = "15px";
-    td4.style.fontSize = "30px";
+    td4.style.fontSize = "20px";
     td4.style.margin = "20px";
     td5.style.fontSize = "15px";
     td6.style.fontSize = "15px";

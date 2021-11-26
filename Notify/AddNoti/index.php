@@ -12,8 +12,7 @@ session_start();
   <link rel="shortcut icon" href="../image/logo.png" />
   <link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">  
-  <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">  
-  <link rel="stylesheet" href="../Css/Home.css">
+  <link rel="stylesheet" href="Home.css">
 </head>
 <body>
 
@@ -31,7 +30,7 @@ session_start();
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
               <a class="dropdown-item" aria-current="page" href="../Home">Trang chủ</a>
               <a class="dropdown-item" aria-current="page" href="../Employee">Nhân viên</a>
-              <a class="dropdown-item" aria-current="page" href="../Notify">Thông báo</a>
+              <a class="dropdown-item" aria-current="page" href="../">Thông báo</a>
               <a class="dropdown-item" aria-current="page" href="../Request">Đơn xin</a>
               <?php if(isset($_SESSION['is_login'])):?>
                 <a class="dropdown-item" aria-current="page" href="../account/index.php">Trang cá nhân</a>
@@ -47,7 +46,7 @@ session_start();
                 <a class="nav-link" aria-current="page" href="../Employee">Nhân viên</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="../Notify">Thông báo</a>
+                <a class="nav-link active" aria-current="page" href="../">Thông báo</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" aria-current="page" href="../Request">Đơn xin</a>
@@ -60,8 +59,59 @@ session_start();
     </div>
   </div>
   
-  <div class ="my-display container">
-    <div id='notification'></div>
+  <div class = "container">
+      <div class="mb-3 col-md-12">
+        <label for="formGroupExampleInput" class="form-label">Tiêu đề:</label>
+        <input type="text" id="title" size="30" class="form-control" placeholder="Nhập tiêu đề" >
+      </div>
+      <div class="mb-3 col-md-12">
+        <label for="formGroupExampleInput" class="form-label">Ngày tạo:</label>
+        <input type="text" id="date" size="25" class="form-control" value = 
+          <?php 
+            echo date("Y-m-d");
+          ?>
+        >
+      </div>
+      <div class="mb-3 col-md-12">
+        <label for="formGroupExampleInput2" class="form-label">Nội dung</label>
+        <textarea id="content" id="content" class = 'form-control' rows="10"></textarea>
+      </div>
+      <div class="mb-3 col-md-6">
+        <label for="formGroupExampleInput" class="form-label">Địa chỉ:</label>
+        <input type="text" id="address" size="25" class="form-control" value = 
+          <?php 
+            echo "'68, Lý Thường Kiệt, quận 10, TPHCM'";
+          ?>
+        >
+      </div>
+      <div class="mb-3 col-md-6">
+        <label for="formGroupExampleInput" class="form-label">email:</label>
+        <input type="text" id="email" size="25" class="form-control"  value = 
+          <?php 
+            echo "hr@big4.com";
+          ?>
+        >
+      </div>
+      <div class="mb-3 col-md-6">
+        <label for="formGroupExampleInput" class="form-label">Số điện thoại:</label>
+        <input type="text" id="telephone" size="25" class="form-control" value = 
+          <?php 
+            echo "0987654321";
+          ?>
+        >
+      </div>
+      <div class="mb-3 col-md-6">
+        <label for="date">Loại thông báo:</label>
+        <input type="text" id="type" size="25" class="form-control"  value = 
+          <?php 
+            echo "1";
+          ?>
+        >
+      </div>
+      <div class="mb-3 col-md-12">
+        <button id = "submitBtn" onClick = "AddDocument_CustomID()">Tạo Thông Báo</button>
+      </div>
+
   </div>
 
 
@@ -74,7 +124,7 @@ session_start();
 </script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
-<script type = 'module' src="./script.js"></script>
+<script type = 'module' src = './script.js'></script>
 
 </body>
 </html>

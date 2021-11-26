@@ -54,14 +54,15 @@ session_start();
               </li>
             </ul>
           </div>
-            
+          <a href="./AddNoti" class="nav-link" aria-current="page">
+             Thêm Thông Báo
+          </a>
         </div>
       </nav>
     </div>
   </div>
   
-  <div class ="my-display container">
-    <div id='notification'></div>
+  <div class ="my-display container" id='notification'>
   </div>
 
 
